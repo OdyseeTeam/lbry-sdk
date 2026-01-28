@@ -360,7 +360,7 @@ class Daemon(metaclass=JSONRPCServerType):
         self.component_startup_task = None
 
         logging.getLogger('aiohttp.access').setLevel(logging.WARN)
-        rpc_app = web.Application()
+        rpc_app = web.Application(client_max_size=10*1024*1024)
         rpc_app.router.add_get('/lbryapi', self.handle_old_jsonrpc)
         rpc_app.router.add_post('/lbryapi', self.handle_old_jsonrpc)
         rpc_app.router.add_post('/', self.handle_old_jsonrpc)
