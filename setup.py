@@ -35,7 +35,7 @@ setup(
         'colorama==0.3.7',
         'distro==1.4.0',
         'base58==1.0.0',
-        'cffi==1.13.2',
+        'cffi==1.16.0',
         'cryptography==3.4.7',
         'protobuf==3.17.2',
         'prometheus_client==0.7.1',
@@ -43,10 +43,11 @@ setup(
         'pyyaml==5.3.1',
         'docopt==0.6.2',
         'hachoir==3.1.2',
-        'coincurve==15.0.0',
+        'coincurve==18.0.0',
         'pbkdf2==1.3',
         'filetype==1.0.9',
-        'libtorrent==2.0.6',
+        'pycryptodome>=3.9.0',
+        'libtorrent==2.0.11',
     ],
     extras_require={
         'lint': [
